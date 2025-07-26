@@ -14,12 +14,23 @@
 </head>
 
 <body>
+  <!-- NAVBAR solo visible en pantallas pequeñas y medianas -->
+  <!--  <nav class="navbar navbar-dark bg-dark d-lg-none">
+    <div class="container-fluid">
+      <span class="navbar-brand">Mi Panel</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav> -->
 
-
-  <div class="d-flex" id="wrapper">
-    <!-- Sidebar -->
-    <div id="sidebar" class="bg-dark text-white p-3">
-      <h4 class="text-center">Mi Panel</h4>
+  <!-- SIDEBAR como OFFCANVAS para pantallas medianas y pequeñas -->
+  <!--  <div class="offcanvas offcanvas-start bg-dark text-white d-lg-none" tabindex="-1" id="sidebarOffcanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Mi Panel</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
       <ul class="nav flex-column">
         <li class="nav-item">
           <a href="#" class="nav-link text-white">Inicio</a>
@@ -32,233 +43,271 @@
         </li>
       </ul>
     </div>
+  </div> -->
+
+  <div class="d-flex" id="wrapper">
+
     <!-- Contenido principal -->
-    <div id="content" class="p-4 w-100 container-fluid">
+    <div id="content" class="container-fluid px-0">
+      <div class="d-lg-flex">
 
-      <!-- INICIO TABLA -->
-      <div class="row mb-4">
-        <div class="col-12">
-          <div class="card card-kpi">
-            <div class="card-body">
-              <h5 class="card-title text-center mb-4">Listado de Atenciones</h5>
-              <div class="table-responsive">
-                <table class="table table-hover table-bordered text-center">
-                  <thead class="table-dark">
-                    <tr>
-                      <th>Fecha Cita</th>
-                      <th>Paciente</th>
-                      <th>Tipo de Atención</th>
-                      <th>Aptitud</th>
-                      <th>Certificado</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>21/07/2025</td>
-                      <td>Juan Pérez</td>
-                      <td>EMO PRE</td>
-                      <td>APTO</td>
-                      <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
-                    </tr>
-                    <tr>
-                      <td>20/07/2025</td>
-                      <td>Lucía Gómez</td>
-                      <td>EMO ANUAL</td>
-                      <td>NO APTO</td>
-                      <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
-                    </tr>
-                    <tr>
-                      <td>20/07/2025</td>
-                      <td>Lucía Gómez</td>
-                      <td>EMO ANUAL</td>
-                      <td>NO APTO</td>
-                      <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
-                    </tr>
-                    <tr>
-                      <td>20/07/2025</td>
-                      <td>Lucía Gómez</td>
-                      <td>EMO ANUAL</td>
-                      <td>NO APTO</td>
-                      <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
-                    </tr>
-                    <tr>
-                      <td>20/07/2025</td>
-                      <td>Lucía Gómez</td>
-                      <td>EMO ANUAL</td>
-                      <td>NO APTO</td>
-                      <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
-                    </tr>
-                    <tr>
-                      <td>20/07/2025</td>
-                      <td>Lucía Gómez</td>
-                      <td>EMO ANUAL</td>
-                      <td>NO APTO</td>
-                      <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
-                    </tr>
-                    <tr>
-                      <td>20/07/2025</td>
-                      <td>Lucía Gómez</td>
-                      <td>EMO ANUAL</td>
-                      <td>NO APTO</td>
-                      <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
-                    </tr>
-                    <tr>
-                      <td>20/07/2025</td>
-                      <td>Lucía Gómez</td>
-                      <td>EMO ANUAL</td>
-                      <td>NO APTO</td>
-                      <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
-                    </tr>
-                    <tr>
-                      <td>20/07/2025</td>
-                      <td>Lucía Gómez</td>
-                      <td>EMO ANUAL</td>
-                      <td>NO APTO</td>
-                      <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
-                    </tr>
-                    <tr>
-                      <td>20/07/2025</td>
-                      <td>Lucía Gómez</td>
-                      <td>EMO ANUAL</td>
-                      <td>NO APTO</td>
-                      <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
-                    </tr>
-                    <!-- Puedes agregar más filas aquí -->
-                  </tbody>
-                </table>
+        <!-- <div id="sidebar" class="bg-dark text-white p-3 d-none d-lg-block">
+          <h4 class="text-center">Mi Panel</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white">Reportes</a>
+            </li>
+          </ul>
+        </div> -->
+        <!-- <div class="col-12 col-lg-10 p-3"> col-lg-10 para que no haya mucho espacio libre ala derecha -->
+        <div class="col-12  p-3">
+          <!-- INICIO TABLA -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <div class="card card-kpi">
+                <div class="card-body">
+
+                  <h5 class="card-title text-center mb-4">Listado de Atenciones</h5>
+                  <div class="table-responsive">
+                    <table class="table table-hover table-bordered text-center">
+                      <thead class="table-primary">
+                        <tr>
+                          <th>Fecha Cita</th>
+                          <th>Paciente</th>
+                          <th>Tipo de Atención</th>
+                          <th>Aptitud</th>
+                          <th>Certificado</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>21/07/2025</td>
+                          <td>Juan Pérez</td>
+                          <td>EMO PRE</td>
+                          <td>APTO</td>
+                          <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
+                        </tr>
+                        <tr>
+                          <td>20/07/2025</td>
+                          <td>Lucía Gómez</td>
+                          <td>EMO ANUAL</td>
+                          <td>NO APTO</td>
+                          <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
+                        </tr>
+                        <tr>
+                          <td>20/07/2025</td>
+                          <td>Lucía Gómez</td>
+                          <td>EMO ANUAL</td>
+                          <td>NO APTO</td>
+                          <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
+                        </tr>
+                        <tr>
+                          <td>20/07/2025</td>
+                          <td>Lucía Gómez</td>
+                          <td>EMO ANUAL</td>
+                          <td>NO APTO</td>
+                          <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
+                        </tr>
+                        <tr>
+                          <td>20/07/2025</td>
+                          <td>Lucía Gómez</td>
+                          <td>EMO ANUAL</td>
+                          <td>NO APTO</td>
+                          <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
+                        </tr>
+                        <tr>
+                          <td>20/07/2025</td>
+                          <td>Lucía Gómez</td>
+                          <td>EMO ANUAL</td>
+                          <td>NO APTO</td>
+                          <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
+                        </tr>
+                        <tr>
+                          <td>20/07/2025</td>
+                          <td>Lucía Gómez</td>
+                          <td>EMO ANUAL</td>
+                          <td>NO APTO</td>
+                          <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
+                        </tr>
+                        <tr>
+                          <td>20/07/2025</td>
+                          <td>Lucía Gómez</td>
+                          <td>EMO ANUAL</td>
+                          <td>NO APTO</td>
+                          <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
+                        </tr>
+                        <tr>
+                          <td>20/07/2025</td>
+                          <td>Lucía Gómez</td>
+                          <td>EMO ANUAL</td>
+                          <td>NO APTO</td>
+                          <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
+                        </tr>
+                        <tr>
+                          <td>20/07/2025</td>
+                          <td>Lucía Gómez</td>
+                          <td>EMO ANUAL</td>
+                          <td>NO APTO</td>
+                          <td><i class="bi bi-file-earmark-excel fs-5 text-success"></i></td>
+                        </tr>
+                        <!-- Puedes agregar más filas aquí -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIN TABLA -->
+          <h2 class="mb-4 text-center"> DASHBOARD DE ATENCIONES MEDICAS</h2>
+          <!-- Fila horizontal con dos cards lado a lado -->
+          <div class="row mb-4">
+            <!-- Card Único para Sexo (Masculino y Femenino) -->
+            <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+              <div class="card card-kpi">
+                <div class="card-body">
+                  <div class="card-header bg-primary text-white text-center py-2 rounded-top">
+                    <h5 class="card-title mb-0">GENERO</h5>
+                  </div>
+
+                  <div class="row p-3">
+                    <!-- Masculino -->
+                    <div class="col-6 text-center">
+                      <h5>MASCULINO</h5>
+                      <canvas id="masculinoChart" class="grafico-pequeno"></canvas>
+                    </div>
+                    <!-- Femenino -->
+                    <div class="col-6 text-center">
+                      <h5>FEMENINO</h5>
+                      <canvas id="femeninoChart" class="grafico-pequeno"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Atendidos vs No Asistidos -->
+            <div class="col-12 col-lg-6">
+              <div class="card card-kpi h-100">
+                <div class="card-body">
+                  <div class="card-header bg-primary text-white text-center py-2 rounded-top">
+                    <h5 class="card-title mb-0">ATENCIONES</h5>
+                  </div>
+                  <!--  <h5 class="card-title text-center mb-3">ATENCIONES</h5> -->
+                  <div class="row p-3">
+                    <!-- Atendidos -->
+                    <div class="col-6 text-center">
+                      <h5>ATENDIDOS</h5>
+                      <canvas id="asistenciasChartAtendidos" class="grafico-pequeno"></canvas>
+                    </div>
+                    <!-- No Atendidos -->
+                    <div class="col-6 text-center">
+                      <h5>NO ASISTIDOS</h5>
+                      <canvas id="asistenciasChartNoAsistidos" class="grafico-pequeno"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fila horizontal con dos cards lado a lado -->
+          <div class="row mb-4">
+            <!-- Tipo de EMO -->
+            <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+              <div class="card card-kpi h-100">
+                <div class="card-body">
+                  <div class="card-header bg-primary text-white text-center py-2 rounded-top">
+                    <h5 class="card-title mb-0">TIPOS DE EMOS</h5>
+                  </div>
+                  <!-- <h5 class="card-title text-center mb-4">TIPOS DE EMOS</h5> -->
+                  <div class="row p-3">
+                    <!-- PRE -->
+                    <div class="col-6 col-lg-4 text-center mb-3">
+                      <h6>PRE</h6>
+                      <canvas id="emoChartPre" class="grafico-pequeno"></canvas>
+                    </div>
+                    <!-- EGRESO -->
+                    <div class="col-6 col-lg-4 text-center mb-3">
+                      <h6>EGRESO</h6>
+                      <canvas id="emoChartEgreso" class="grafico-pequeno"></canvas>
+                    </div>
+                    <!-- ANUAL -->
+                    <div class="col-6 offset-3 col-lg-4 offset-lg-0 text-center mb-3">
+                      <h6>ANUAL</h6>
+                      <canvas id="emoChartAnual" class="grafico-pequeno"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Atencion por Aptitud -->
+            <div class="col-12 col-lg-6">
+              <div class="card card-kpi h-100">
+                <div class="card-body">
+                  <div class="card-header bg-primary text-white text-center py-2 rounded-top">
+                    <h5 class="card-title mb-0">ATENCION POR ACTITUD</h5>
+                  </div>
+                  <!--  <h5 class="card-title text-center mb-4">ATENCION POR ACTITUD</h5> -->
+                  <div class="row p-3">
+                    <!-- APTO -->
+                    <div class="col-6 col-lg-3 text-center mb-3">
+                      <h6>APTO</h6>
+                      <canvas id="aptitudChartApto" class="grafico-pequeno"></canvas>
+                    </div>
+                    <!-- APTO RES -->
+                    <div class="col-6 col-lg-3 text-center mb-3">
+                      <h6>APTO RES</h6>
+                      <canvas id="aptitudChartAptoRes" class="grafico-pequeno"></canvas>
+                    </div>
+                    <!-- NO APTO -->
+                    <div class="col-6 col-lg-3 text-center mb-3">
+                      <h6>NO APTO</h6>
+                      <canvas id="aptitudChartNoApto" class="grafico-pequeno"></canvas>
+                    </div>
+                    <!-- OBSERVADO -->
+                    <div class="col-6 col-lg-3 text-center mb-3">
+                      <h6>OBSERVADO</h6>
+                      <canvas id="aptitudChartObservado" class="grafico-pequeno"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fila horizontal con dos cards lado a lado -->
+          <!-- Aptitud -->
+          <div class="row mb-4">
+            <!-- Barras por mes -->
+            <div class="col-md-12">
+              <div class="card card-kpi">
+                <div class="card-body">
+                  <div class="card-header bg-primary text-white text-center py-2 rounded-top">
+                    <h5 class="card-title mb-0">ATENCIONES POR MES</h5>
+                  </div>
+                  <!-- <h5 class="card-title text-center">ATENCIONES POR MES</h5> -->
+                  <canvas id="barrasMesChart" class="grafico-ancho"></canvas>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- FIN TABLA -->
 
 
-      <h2 class="mb-4 text-center"> DASHBOARD DE ATENCIONES MEDICAS</h2>
-
-      <!-- Fila horizontal con dos cards lado a lado -->
-      <div class="row mb-4">
-        <!-- Card Único para Sexo (Masculino y Femenino) -->
-        <div class="col-md-6">
-          <div class="card card-kpi">
-            <div class="card-body">
-              <h5 class="card-title text-center mb-4">GENERO</h5>
-              <div class="row">
-                <!-- Masculino -->
-                <div class="col-6 text-center">
-                  <h5>MASCULINO</h5>
-                  <canvas id="masculinoChart" class="grafico-pequeno"></canvas>
-                </div>
-                <!-- Femenino -->
-                <div class="col-6 text-center">
-                  <h5>FEMENINO</h5>
-                  <canvas id="femeninoChart" class="grafico-pequeno"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Atendidos vs No Asistidos -->
-        <div class="col-md-6">
-          <div class="card card-kpi">
-            <div class="card-body">
-              <h5 class="card-title text-center mb-4">ATENCIONES</h5>
-              <div class="row">
-                <!-- Atendidos -->
-                <div class="col-6 text-center">
-                  <h5>ATENDIDOS</h5>
-                  <canvas id="asistenciasChartAtendidos" class="grafico-pequeno"></canvas>
-                </div>
-                <!-- No Atendidos -->
-                <div class="col-6 text-center">
-                  <h5>NO ASISTIDOS</h5>
-                  <canvas id="asistenciasChartNoAsistidos" class="grafico-pequeno"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Fila horizontal con dos cards lado a lado -->
-      <div class="row mb-4">
-        <!-- Tipo de EMO -->
-        <div class="col-12 col-lg-6 ">
-          <div class="card card-kpi ">
-            <div class="card-body">
-              <h5 class="card-title text-center mb-4">TIPOS DE EMOS</h5>
-              <div class="row">
-                <!-- PRE -->
-                <div class="col-6 col-lg-4 text-center mb-3">
-                  <h6>PRE</h6>
-                  <canvas id="emoChartPre" class="grafico-pequeno"></canvas>
-                </div>
-                <!-- EGRESO -->
-                <div class="col-6 col-lg-4 text-center mb-3">
-                  <h6>EGRESO</h6>
-                  <canvas id="emoChartEgreso" class="grafico-pequeno"></canvas>
-                </div>
-                <!-- ANUAL -->
-                <div class="col-6 offset-3 col-lg-4 offset-lg-0 text-center mb-3">
-                  <h6>ANUAL</h6>
-                  <canvas id="emoChartAnual" class="grafico-pequeno"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Atencion por Aptitud -->
-        <div class="col-12 col-lg-6">
-          <div class="card card-kpi ">
-            <div class="card-body">
-              <h5 class="card-title text-center mb-4">ATENCION POR ACTITUD</h5>
-              <div class="row">
-                <!-- APTO -->
-                <div class="col-6 col-lg-3 text-center mb-3">
-                  <h6>APTO</h6>
-                  <canvas id="aptitudChartApto" class="grafico-pequeno"></canvas>
-                </div>
-                <!-- APTO RES -->
-                <div class="col-6 col-lg-3 text-center mb-3">
-                  <h6>APTO RES</h6>
-                  <canvas id="aptitudChartAptoRes" class="grafico-pequeno"></canvas>
-                </div>
-                <!-- NO APTO -->
-                <div class="col-6 col-lg-3 text-center mb-3">
-                  <h6>NO APTO</h6>
-                  <canvas id="aptitudChartNoApto" class="grafico-pequeno"></canvas>
-                </div>
-                <!-- OBSERVADO -->
-                <div class="col-6 col-lg-3 text-center mb-3">
-                  <h6>OBSERVADO</h6>
-                  <canvas id="aptitudChartObservado" class="grafico-pequeno"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fila horizontal con dos cards lado a lado -->
-      <!-- Aptitud -->
-      <div class="row mb-4">
-
-        <!-- Barras por mes -->
-        <div class="col-md-12">
-          <div class="card card-kpi">
-            <div class="card-body">
-              <h5 class="card-title text-center">ATENCIONES POR MES</h5>
-              <canvas id="barrasMesChart" class="grafico-ancho"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
   </div>
 </body>
 <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
 <script src="/chart.js"></script>
+<script src="/chartjs-plugin-datalabels.min.js"></script>
 <script src="/script.js"></script>
+
 
 </html>

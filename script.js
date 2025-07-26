@@ -410,8 +410,179 @@ new Chart(document.getElementById("aptitudChartObservado"), {
   },
 });
 
-// Barras: Atenciones por mes
+/* new Chart(document.getElementById("barrasMesChart"), {
+  type: "scatter",
+  data: {
+    labels: [
+      "Ene",
+      "Feb",
+      "Mar",
+      "Abr",
+      "May",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dic",
+    ],
+    datasets: [
+      {
+        type: "bar",
+        label: "Atenciones",
+        data: [15, 30, 25, 20, 35, 40, 38, 22, 30, 50, 45, 28],
+        backgroundColor: "rgba(75, 192, 192, 0.6)",
+        borderColor: "rgb(75, 192, 192)",
+        borderWidth: 1,
+        datalabels: {
+          display: true,
+          anchor: "end",
+          align: "top",
+          color: "#4B5563", // gris oscuro suave
+          font: {
+            size: 13,
+            weight: "bold",
+            family: "Arial", // o 'Poppins', 'Roboto', etc. si tienes cargado Google Fonts
+          },
+          backgroundColor: "rgba(255, 255, 255, 0.8)",
+          borderRadius: 6,
+          padding: {
+            top: 6,
+            bottom: 4,
+            left: 8,
+            right: 8,
+          },
+          borderWidth: 1,
+          borderColor: "#D1D5DB", // gris claro
+          formatter: (value) => `${value}`, // puedes personalizar con texto
+        },
+      },
+      {
+        type: "line",
+        label: "Atenciones Línea",
+        data: [15, 30, 25, 20, 35, 40, 38, 22, 30, 50, 45, 28],
+        borderColor: "rgb(54, 162, 235)",
+        borderWidth: 2,
+        tension: 0.3,
+        datalabels: {
+          display: false, // ❌ sin etiquetas en la línea
+        },
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      datalabels: {
+        clip: false, // 👈 asegura que no se recorten las etiquetas fuera del canvas
+      },
+      legend: {
+        display: false,
+      },
+    },
+    scales: {
+      y: {
+        display: false, // 👈 Esto oculta las líneas del eje Y
+      },
+    },
+  },
+  plugins: [ChartDataLabels],
+}); */
+
 new Chart(document.getElementById("barrasMesChart"), {
+  type: "bar",
+  data: {
+    labels: [
+      "Ene",
+      "Feb",
+      "Mar",
+      "Abr",
+      "May",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dic",
+    ],
+    datasets: [
+      {
+        label: "Atenciones",
+        data: [15, 30, 25, 20, 35, 40, 38, 22, 30, 50, 45, 28],
+        backgroundColor: "rgba(54, 162, 235, 0.6)",
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1,
+        datalabels: {
+          display: true,
+          anchor: "end",
+          align: "top",
+          color: "#000",
+          font: {
+            size: 13,
+            weight: "bold",
+            family: "Arial",
+          },
+          backgroundColor: "rgba(255, 255, 255, 0.8)",
+          borderRadius: 6,
+          padding: {
+            top: 6,
+            bottom: 4,
+            left: 8,
+            right: 8,
+          },
+          borderWidth: 1,
+          borderColor: "#D1D5DB", // gris claro
+          formatter: (value) => `${value}`, // puedes personalizar con texto
+        },
+      },
+      {
+        type: "line",
+        label: "Tendencia",
+        display: false,
+        data: [15, 30, 25, 20, 35, 40, 38, 22, 30, 50, 45, 28],
+        borderColor: "rgb(54, 162, 235)",
+        borderWidth: 4,
+        fill: false,
+        pointRadius: 3,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      datalabels: {
+        display: false,
+        anchor: "end",
+        align: "top",
+        color: "#000",
+        font: {
+          size: 12,
+          weight: "bold",
+        },
+        formatter: (value) => value,
+      },
+    },
+    scales: {
+      x: {
+        grid: { display: false }, // ❌ Oculta línea del eje X
+        ticks: { display: true }, // ✅ Muestra etiquetas del eje X
+      },
+      y: {
+        grid: { display: false }, // ❌ Oculta líneas del eje Y
+        ticks: { display: false }, // ✅ Muestra números del eje Y
+      },
+    },
+  },
+  plugins: [ChartDataLabels], // 👈 Asegúrate de cargar esto
+});
+
+// Barras: Atenciones por mes
+/* new Chart(document.getElementById("barrasMesChart"), {
   type: "scatter",
 
   data: {
@@ -486,3 +657,4 @@ new Chart(document.getElementById("barrasMesChart"), {
     },
   },
 });
+ */
